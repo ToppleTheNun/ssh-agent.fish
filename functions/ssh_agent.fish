@@ -15,6 +15,7 @@ function _ssh_agent_start -d "start a new ssh agent"
         set -xg SSH_ENV $HOME/.ssh/environment
     end
 
+    mkdir -p (dirname $SSH_ENV)
     ssh-agent -c | sed 's/^echo/#echo/' > $SSH_ENV
     set -Ux SSH_AUTH_SOCK $SSH_AUTH_SOCK
     set -Ux SSH_AGENT_PID $SSH_AGENT_PID
