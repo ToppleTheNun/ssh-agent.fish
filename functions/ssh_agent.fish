@@ -1,5 +1,5 @@
 function _ssh_agent_is_started -d "check if a process for ssh-agent is already started"
-    if test -n (command pgrep ssh-agent | string collect | string trim)
+    if test -n "(command pgrep ssh-agent | string collect | string trim)"
         echo true
     else
         echo false

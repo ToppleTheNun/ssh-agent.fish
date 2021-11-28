@@ -13,8 +13,7 @@
 ) = "Not started"
 
 @test "can check if ssh-agent is started" (
-    ssh_agent_fish start
-    ssh_agent_fish check
+    ssh_agent_fish start && ssh_agent_fish check
 ) = "Started"
 
 # @test "can detect if ssh-agent is not running" (
