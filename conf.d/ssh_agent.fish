@@ -3,5 +3,5 @@ function _ssh_agent_uninstall --on-event ssh_agent_uninstall
 end
 
 if status is-interactive
-    ssh_agent_fish start
+    ssh_agent start
 end
